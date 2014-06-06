@@ -1,0 +1,13 @@
+<h1> Tweets List </h1>
+
+<% @tweets.each do |item|%>
+<ul>
+    <li>
+    <b> Title: </b><%= item.title %> 
+	<b> Text: </b><%= item.text %>-<a href="/tweeets/:id/edit" >Edit</a>-<a href="/tweeets/:id/delete">Delete</a>
+	</li>
+</ul>
+
+	<% end %> 
+	<%= will_paginate @tweets %>
+	<a href="/tweeets/new">Add a new tweet</a>
